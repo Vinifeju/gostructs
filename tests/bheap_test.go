@@ -21,7 +21,7 @@ func TestDelAllItems(t *testing.T) {
 		t.Errorf("error TestDelAllItems got %v ", heap.HeapItems())
 	}
 
-	if heap.HeapLen() > 0 {
+	if heap.HeapLen() != -1 {
 		t.Errorf("error TestDelAllItems got %d ", heap.HeapLen())
 	}
 }
