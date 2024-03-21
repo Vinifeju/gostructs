@@ -76,7 +76,7 @@ func (b *Bheap) BuildHeap() {
 }
 
 func (b *Bheap) DelMin() (int, error) {
-	if len(b.heapitems) == 0 {
+	if len(b.heapitems) < 0 {
 		return -1, fmt.Errorf("del from empty heap")
 	}
 	firstElem := b.heapitems[0]
